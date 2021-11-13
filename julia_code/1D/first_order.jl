@@ -31,12 +31,16 @@ function poisson_1D(Dbc_value)
         L[i] = f_l(-1/sqrt(3),i-1) + f_l(1/sqrt(3),i-1)
         L[i] = L[i] + f_r(-1/sqrt(3),i-1) + f_r(1/sqrt(3),i-1)
     end
+    u = zeros(N+1,1)
     u[1] = Dbc_value[1]
     L[end] = Dbc_value[2]
-    for i = 2:N
-        u[i] = 1/M[i,i]*(L[i] - M[i,i-1]*u[i-1] - M[i,i+1] *u[i+1])
+    for t = 1:100
+        for i = 2:N
+            u[i] = (L[i] - M[i,i-1]*u[i-1] - M[i,i+1] *u[i+1])/M[i,i]
+        end
     end
-    u = M\L
+    println(L)
+    return u
 end
 u = poisson_1D([0,0])
 plot(u)
