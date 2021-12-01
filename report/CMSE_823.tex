@@ -3,7 +3,10 @@
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{caption}
+\usepackage{mathabx}
 \usepackage{subcaption}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 \begin{document}
 
 \section{Abstract}
@@ -21,6 +24,7 @@ in a irregular domain $\Gamma$ with Dirichlet boundary condition $u(\mathbf{x}) 
   
 \section{Results}
 \subsection{One dimensional case}
+\subsection{formula of finite element method}
 Consider problem  
 \begin{equation}
 \label{equ:poisson_equation}
@@ -67,6 +71,28 @@ This is a linear system of equations $A\mathbf{u} = \mathbf{f}$, with $A = [a_{i
 	a_{ij} = \int_0^1\varphi'_i(x)\varphi'_j(x)dx \\
 	f_i  = \int_0^1f(x)\varphi_i(x) dx
 \end{align}
+
+\subsection{Parallel computation strategy}
+First we try Gauss Seidel method to solve the linear system defined in the formal section. The brief introduction of the Gauss Seidel method is shown belew
+\begin{algorithm}
+\caption{Gauss seidel method}\label{alg:gauss_seidel}
+\begin{algorithmic}
+\Require $A = (a_{ij})$,$f = f_i$
+\State $\epsilon=1$
+\While{$\epsilon \leq 1e-3$}
+\State \textbf{for} $i$ \textbf{from} $1$ \textbf{until} $n$ \textbf{do}
+\State \quad $\sigma \leftarrow 0$
+\State \quad \textbf{for} $j$ \textbf{from} $1$ \textbf{until} $n$ \textbf{do}
+\State \quad \quad \textbf{if} $j \neq i$
+\textbf{then}
+\State \quad  \quad  $\sigma$ $\leftarrow \sigma + a_{ij}u_j$
+\State \quad  \quad \textbf{end if}
+\State \quad \textbf{end} ($j$ - loop)
+\State $u_i \leftrrow \frac{1}{a_{ii}} (f_i - \sigma)$
+\EndWhile
+\end{algorithmic}
+\end{algorithm}
+
 
 \section{Discussion}
 
