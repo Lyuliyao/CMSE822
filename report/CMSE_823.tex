@@ -88,11 +88,18 @@ First we try Gauss Seidel method to solve the linear system defined in the forma
 \State \quad  \quad  $\sigma$ $\leftarrow \sigma + a_{ij}u_j$
 \State \quad  \quad \textbf{end if}
 \State \quad \textbf{end} ($j$ - loop)
-\State $u_i \leftrrow \frac{1}{a_{ii}} (f_i - \sigma)$
+\State $u_i \leftarrow \frac{1}{a_{ii}} (f_i - \sigma)$
 \EndWhile
 \end{algorithmic}
 \end{algorithm}
-
+The advantage of the Gauss Seidel method is that it's easy to parall computing. The $u_i$ can be updated independently because they only need the information of the last step. We try to use Openmp and MPI to parallel compute the result.  
+The numerical result is shown in the Figure
+\begin{figure}
+    \centering
+    \includegraphics[width = 0.5\linewidth]{../CPP_code/1D_problem/openmp_version_gauss_seidel/result.png}
+    \caption{The comparison result of the exact result and the numerical result, when the domain is decomposed into 10 equal part.}
+    \label{fig:result comparison}
+\end{figure}
 
 \section{Discussion}
 
