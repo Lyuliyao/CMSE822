@@ -1,0 +1,59 @@
+0.00141793
+0.000603242
+0.000272592
+0.000132982
+4.24693e-05
+2.73426e-05
+JobId=41504359 JobName=run_me
+   UserId=lyuliyao(6006467) GroupId=cmse(2362) MCS_label=N/A
+   Priority=47420 Nice=0 Account=general QOS=lyuliyao
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:04:18 TimeLimit=00:10:00 TimeMin=N/A
+   SubmitTime=2021-12-04T17:07:53 EligibleTime=2021-12-04T17:07:53
+   AccrueTime=2021-12-04T17:07:53
+   StartTime=2021-12-04T17:12:37 EndTime=2021-12-04T17:22:37 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2021-12-04T17:12:37
+   Partition=general-long AllocNode:Sid=dev-intel18:20365
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=skl-062
+   BatchHost=skl-062
+   NumNodes=1 NumCPUs=32 NumTasks=32 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=32,mem=24000M,node=1,billing=3648
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryCPU=750M MinTmpDiskNode=0
+   Features=[intel18]&[intel14|intel16|intel18|amr|nvf|nal|nif] DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/CPP_code/1D_problem/openmp_version_gauss_seidel/run_me
+   WorkDir=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/CPP_code/1D_problem/openmp_version_gauss_seidel
+   Comment=stdout=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/CPP_code/1D_problem/openmp_version_gauss_seidel/slurm-41504357.out 
+   StdErr=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/CPP_code/1D_problem/openmp_version_gauss_seidel/slurm-41504359.out
+   StdIn=/dev/null
+   StdOut=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/CPP_code/1D_problem/openmp_version_gauss_seidel/slurm-41504359.out
+   Power=
+   NtasksPerTRES:0
+
+
+SLURM Job ID: 41504359
+WrkDir=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/CPP_code/1D_problem/openmp_version_gauss_seidel
+===================================================================================
+          JobID |            41504359 |      41504359.batch |     41504359.extern |
+        JobName |              run_me |               batch |              extern |
+           User |            lyuliyao |                     |                     |
+       NodeList |             skl-062 |             skl-062 |             skl-062 |
+         NNodes |                   1 |                   1 |                   1 |
+         NTasks |                     |                   1 |                   1 |
+          NCPUS |                  32 |                  32 |                  32 |
+      AllocGRES |                     |                     |                     |
+         ReqMem |               750Mc |               750Mc |               750Mc |
+      Timelimit |            00:10:00 |                     |                     |
+        Elapsed |            00:04:18 |            00:04:18 |            00:04:18 |
+       TotalCPU |            00:00:00 |            00:10:44 |            00:00:00 |
+     AveCPULoad |                     |             2.49612 |                     |
+         MaxRSS |                     |            8594816K |                     |
+      MaxVMSize |                     |             217660K |                     |
+          Start | 2021-12-04T17:12:37 | 2021-12-04T17:12:37 | 2021-12-04T17:12:37 |
+            End |             Unknown |             Unknown |             Unknown |
+       ExitCode |                 0:0 |                 0:0 |                 0:0 |
+          State |             RUNNING |             RUNNING |             RUNNING |
+===================================================================================
