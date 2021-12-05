@@ -1,33 +1,33 @@
 #!/bin/bash --login
+#SBATCH -J test1_leakyrelu
+#SBATCH -N 1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=12G
+#SBATCH --gres=gpu:v100:1
+#SBATCH --time=00:10:00
 
-########## SBATCH Lines for Resource Request ##########
-
-#SBATCH --time=00:10:00            # limit of wall clock time - how long the job will run (same as -t)
-#SBATCH --nodes=1              # number of different nodes - could be an exact number or a range of nodes (same as -N)
-#SBATCH --ntasks=32               # number of tasks - how many tasks (nodes) that you require (same as -n)
-#SBATCH -C '[intel18]'
 
 
 ########## Command Lines to Run ##########
  
 #module load powertools/1.2 
 
-mpic++ 1D.cpp 
-mpirun -n 1 ./a.out 32000
-mpirun -n 2 ./a.out 32000
-mpirun -n 4 ./a.out 32000
-mpirun -n 8 ./a.out 32000
-mpirun -n 16 ./a.out 32000
-mpirun -n 32 ./a.out 32000
+nvcc 1D.cu
+
+./a.out 32000 1
+./a.out 32000 2
+./a.out 32000 4
+./a.out 32000 8
+./a.out 32000 32
+./a.out 32000 64
 
 
-
-mpirun -n 1 ./a.out 64000
-mpirun -n 2 ./a.out 64000
-mpirun -n 4 ./a.out 64000
-mpirun -n 8 ./a.out 64000
-mpirun -n 16 ./a.out 64000
-mpirun -n 32 ./a.out 64000
+./a.out 64000 1
+./a.out 64000 2
+./a.out 64000 4
+./a.out 64000 8
+./a.out 64000 32
+./a.out 64000 64
 
 
 

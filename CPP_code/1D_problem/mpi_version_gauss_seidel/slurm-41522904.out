@@ -1,0 +1,125 @@
+0.000365184
+0.000250849
+0.000217986
+0.00023789
+0.000324083
+0.000285311
+0.000804676
+0.000510317
+0.000434813
+0.000435639
+0.000501324
+0.000701634
+JobId=41522904 JobName=run_me
+   UserId=lyuliyao(6006467) GroupId=cmse(2362) MCS_label=N/A
+   Priority=53956 Nice=0 Account=general QOS=lyuliyao
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:08:55 TimeLimit=00:10:00 TimeMin=N/A
+   SubmitTime=2021-12-05T14:59:51 EligibleTime=2021-12-05T14:59:51
+   AccrueTime=2021-12-05T14:59:51
+   StartTime=2021-12-05T15:00:17 EndTime=2021-12-05T15:10:17 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2021-12-05T15:00:17
+   Partition=general-short AllocNode:Sid=dev-intel18:12252
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=skl-013
+   BatchHost=skl-013
+   NumNodes=1 NumCPUs=32 NumTasks=32 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=32,mem=24000M,node=1,billing=3648
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryCPU=750M MinTmpDiskNode=0
+   Features=[intel18]&[intel14|intel16|intel18|amr|nvf|nal|nif] DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/CPP_code/1D_problem/mpi_version_gauss_seidel/run_me
+   WorkDir=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/CPP_code/1D_problem/mpi_version_gauss_seidel
+   Comment=stdout=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/CPP_code/1D_problem/mpi_version_gauss_seidel/slurm-41522904.out 
+   StdErr=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/CPP_code/1D_problem/mpi_version_gauss_seidel/slurm-41522904.out
+   StdIn=/dev/null
+   StdOut=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/CPP_code/1D_problem/mpi_version_gauss_seidel/slurm-41522904.out
+   Power=
+   NtasksPerTRES:0
+
+
+SLURM Job ID: 41522904
+WrkDir=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/CPP_code/1D_problem/mpi_version_gauss_seidel
+=========================================================================================================
+          JobID |            41522904 |      41522904.batch |     41522904.extern |          41522904.0 |
+        JobName |              run_me |               batch |              extern |               a.out |
+           User |            lyuliyao |                     |                     |                     |
+       NodeList |             skl-013 |             skl-013 |             skl-013 |             skl-013 |
+         NNodes |                   1 |                   1 |                   1 |                   1 |
+         NTasks |                     |                   1 |                   1 |                   1 |
+          NCPUS |                  32 |                  32 |                  32 |                  32 |
+      AllocGRES |                     |                     |                     |                     |
+         ReqMem |               750Mc |               750Mc |               750Mc |               750Mc |
+      Timelimit |            00:10:00 |                     |                     |                     |
+        Elapsed |            00:08:56 |            00:08:56 |            00:08:56 |            00:00:37 |
+       TotalCPU |            01:35:06 |            00:00:02 |            00:00:00 |           00:36.587 |
+     AveCPULoad |             10.6455 |          0.00373134 |                     |            0.988838 |
+         MaxRSS |                     |               5260K |                     |            4009764K |
+      MaxVMSize |                     |             217660K |                     |            4134656K |
+          Start | 2021-12-05T15:00:17 | 2021-12-05T15:00:17 | 2021-12-05T15:00:17 | 2021-12-05T15:00:23 |
+            End |             Unknown |             Unknown |             Unknown | 2021-12-05T15:01:00 |
+       ExitCode |                 0:0 |                 0:0 |                 0:0 |                 0:0 |
+          State |             RUNNING |             RUNNING |             RUNNING |           COMPLETED |
+=========================================================================================================
+          JobID |          41522904.1 |          41522904.2 |          41522904.3 |          41522904.4 |
+        JobName |               a.out |               a.out |               a.out |               a.out |
+           User |                     |                     |                     |                     |
+       NodeList |             skl-013 |             skl-013 |             skl-013 |             skl-013 |
+         NNodes |                   1 |                   1 |                   1 |                   1 |
+         NTasks |                   2 |                   4 |                   8 |                  16 |
+          NCPUS |                  32 |                  32 |                  32 |                  32 |
+      AllocGRES |                     |                     |                     |                     |
+         ReqMem |               750Mc |               750Mc |               750Mc |               750Mc |
+      Timelimit |                     |                     |                     |                     |
+        Elapsed |            00:00:26 |            00:00:23 |            00:00:25 |            00:00:35 |
+       TotalCPU |           00:50.373 |           01:27.963 |           03:13.444 |           08:49.666 |
+     AveCPULoad |             1.93742 |             3.82448 |             7.73776 |             15.1333 |
+         MaxRSS |            2011336K |            1011884K |             512132K |             266356K |
+      MaxVMSize |            4274544K |            4182.50M |            4299144K |            4332068K |
+          Start | 2021-12-05T15:01:00 | 2021-12-05T15:01:26 | 2021-12-05T15:01:49 | 2021-12-05T15:02:14 |
+            End | 2021-12-05T15:01:26 | 2021-12-05T15:01:49 | 2021-12-05T15:02:14 | 2021-12-05T15:02:49 |
+       ExitCode |                 0:0 |                 0:0 |                 0:0 |                 0:0 |
+          State |           COMPLETED |           COMPLETED |           COMPLETED |           COMPLETED |
+=========================================================================================================
+          JobID |          41522904.5 |          41522904.6 |          41522904.7 |          41522904.8 |
+        JobName |               a.out |               a.out |               a.out |               a.out |
+           User |                     |                     |                     |                     |
+       NodeList |             skl-013 |             skl-013 |             skl-013 |             skl-013 |
+         NNodes |                   1 |                   1 |                   1 |                   1 |
+         NTasks |                  32 |                   1 |                   2 |                   4 |
+          NCPUS |                  32 |                  32 |                  32 |                  32 |
+      AllocGRES |                     |                     |                     |                     |
+         ReqMem |               750Mc |               750Mc |               750Mc |               750Mc |
+      Timelimit |                     |                     |                     |                     |
+        Elapsed |            00:00:34 |            00:01:21 |            00:00:52 |            00:00:45 |
+       TotalCPU |           16:16.111 |           01:20.482 |           01:42.206 |           02:55.575 |
+     AveCPULoad |             28.7091 |            0.993605 |              1.9655 |             3.90167 |
+         MaxRSS |             141652K |           14284352K |            8014252K |            4014452K |
+      MaxVMSize |            4397828K |           16135532K |           16275352K |           16283632K |
+          Start | 2021-12-05T15:02:49 | 2021-12-05T15:03:23 | 2021-12-05T15:04:44 | 2021-12-05T15:05:36 |
+            End | 2021-12-05T15:03:23 | 2021-12-05T15:04:44 | 2021-12-05T15:05:36 | 2021-12-05T15:06:21 |
+       ExitCode |                 0:0 |                 0:0 |                 0:0 |                 0:0 |
+          State |           COMPLETED |           COMPLETED |           COMPLETED |           COMPLETED |
+=========================================================================================================
+          JobID |          41522904.9 |         41522904.10 |         41522904.11 |
+        JobName |               a.out |               a.out |               a.out |
+           User |                     |                     |                     |
+       NodeList |             skl-013 |             skl-013 |             skl-013 |
+         NNodes |                   1 |                   1 |                   1 |
+         NTasks |                   8 |                  16 |                  32 |
+          NCPUS |                  32 |                  32 |                  32 |
+      AllocGRES |                     |                     |                     |
+         ReqMem |               750Mc |               750Mc |               750Mc |
+      Timelimit |                     |                     |                     |
+        Elapsed |            00:00:44 |            00:00:53 |            00:01:15 |
+       TotalCPU |           05:51.305 |           13:36.854 |           38:25.455 |
+     AveCPULoad |              7.9842 |             15.4123 |             30.7394 |
+         MaxRSS |            2017548K |            1016092K |             516420K |
+      MaxVMSize |           16299988K |           16332820K |           16398444K |
+          Start | 2021-12-05T15:06:21 | 2021-12-05T15:07:05 | 2021-12-05T15:07:58 |
+            End | 2021-12-05T15:07:05 | 2021-12-05T15:07:58 | 2021-12-05T15:09:13 |
+       ExitCode |                 0:0 |                 0:0 |                 0:0 |
+          State |           COMPLETED |           COMPLETED |           COMPLETED |
+===================================================================================

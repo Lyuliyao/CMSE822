@@ -27,7 +27,7 @@ int main(int argc, char **argv){
     int myrank,from,to,i,P;
     int tag = 666;		/* any value will do */
     MPI_Status status;
-      
+
     MPI_Init (&argc, &argv);
     MPI_Comm_rank(MPI_COMM_WORLD, &myrank);	/* who am i */
     MPI_Comm_size(MPI_COMM_WORLD, &P); /* number of processors */
@@ -46,7 +46,7 @@ int main(int argc, char **argv){
 		left_vector[i]= f_l(-1/sqrt(3),i-1,N) + f_l(1/sqrt(3),i-1,N);
 		left_vector[i]= left_vector[i] + f_r(-1/sqrt(3),i-1,N) + f_r(1/sqrt(3),i-1,N);
 	}
-	
+
     for (int i=1; i<=N;i++){
 			u[i] = 0;
 			}
@@ -54,8 +54,8 @@ int main(int argc, char **argv){
 	u[N+1] = right_b;
 	float global_u[N+2];
 	MPI_Allreduce(&u,&global_u,(N+2),MPI_FLOAT,MPI_SUM,MPI_COMM_WORLD);
-    
-	
+
+
 	for (int t=0; t<100000; t++){
 		for (int i=from; i<=to;i++){
 			u[i] = (left_vector[i] - mass_matrix[i][i-1]*global_u[i-1] - mass_matrix[i][i+1] *global_u[i+1])/mass_matrix[i][i];
@@ -73,7 +73,7 @@ int main(int argc, char **argv){
 	}
 	myfile << u[N+1];
     myfile.close();
-	cout  << full_time/100000 ;
+	cout  << full_time/100000 <<endl ;
 	}
 
     // Output time taken by this rank

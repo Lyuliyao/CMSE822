@@ -50,7 +50,7 @@ int main(int argc, char **argv){
 	}
 	double t2 = omp_get_wtime();
 	ofstream myfile;
-  myfile.open ("result.txt");
+    myfile.open ("result.txt");
 	for (int i = 0; i<N+1;i++){
 		myfile << u[i] << " ";
 	}
