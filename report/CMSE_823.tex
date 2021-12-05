@@ -124,6 +124,29 @@ The advantage of the Gauss Seidel method is that it's easy to parall computing. 
     \caption{This table records the computation time openmp cost for different number of thread to compute the different number of gird.}
     \label{tab:openmp table}
 \end{table}
+
+MPI is also tried to use to this problem, where each thread is used to calculate some row of the vector. The "ReduceAll" is used to distribute the result to each worker, but the time cannot be decreased dramatically.
+This is because much time is wasted on communication. A more careful treatment to the memory distribution is needed to make it faster. However, I don't have enough time to do it now.
+\begin{figure}
+    \centering
+    \includegraphics[width = 0.5\linewidth]{../CPP_code/1D_problem/mpi_version_gauss_seidel/mpi_result.png}
+    \caption{The computation time openmp takes with respect to the number of threads}
+    \label{fig:openmp result}
+\end{figure}
+\begin{table}[htp]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    Thread Num & 1 & 2 & 4 & 8 & 16 & 32 \\
+    \hline
+    n =32000     &3.65e-04 &2.51e-04 &2.18e-04 &2.38e-04 &3.24e-04 &2.85e-04  \\
+    \hline
+    n =64000     &8.05e-04 &5.10e-04 &4.35e-04 &4.36e-04 &5.01e-04 &7.02e-04\\
+    \hline
+    \end{tabular}
+    \caption{This table records the computation time mpi cost for different number of thread to compute the different number of gird.}
+    \label{tab:mpi table}
+\end{table}
 \section{Discussion}
 
 \end{document}
