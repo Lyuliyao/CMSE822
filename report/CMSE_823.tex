@@ -24,7 +24,7 @@ in a irregular domain $\Gamma$ with Dirichlet boundary condition $u(\mathbf{x}) 
   
 \section{Results}
 \subsection{One dimensional case}
-\subsection{formula of finite element method}
+\subsubsection{formula of finite element method}
 Consider problem  
 \begin{equation}
 \label{equ:poisson_equation}
@@ -72,7 +72,7 @@ This is a linear system of equations $A\mathbf{u} = \mathbf{f}$, with $A = [a_{i
 	f_i  = \int_0^1f(x)\varphi_i(x) dx
 \end{align}
 
-\subsection{Parallel computation strategy}
+\subsubsection{Parallel computation strategy}
 First we try Gauss Seidel method to solve the linear system defined in the formal section. The brief introduction of the Gauss Seidel method is shown belew
 \begin{algorithm}
 \caption{Gauss seidel method}\label{alg:gauss_seidel}
@@ -102,7 +102,7 @@ The numerical result is shown in the Figure \ref{fig:result comparison}
 \end{figure}
 
 
-The advantage of the Gauss Seidel method is that it's easy to parall computing. The $u_i$ can be updated independently because they only need the information of the last step. We try to use Openmp and MPI to parallel compute the result.  The computation time used to update each step compared with the thread used is shown in the Figure \ref{fig:openmp result}.
+The advantage of the Gauss Seidel method is that it's easy to parall computing. The $u_i$ can be updated independently because they only need the information of the last step. We try to use Openmp and MPI to parallel compute the result.  The computation time used with OpenMP to update each step compared with the thread used is shown in the Figure \ref{fig:openmp result} and Table \ref{tab:openmp table}. It's obvious that the time used is proportional decrease with the number of the thread increase.
 \begin{figure}
     \centering
     \includegraphics[width = 0.5\linewidth]{../CPP_code/1D_problem/openmp_version_gauss_seidel/open_mp_result.png}
@@ -110,7 +110,20 @@ The advantage of the Gauss Seidel method is that it's easy to parall computing. 
     \label{fig:openmp result}
 \end{figure}
 
-
+\begin{table}[htp]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    Thread Num & 1 & 2 & 4 & 8 & 16 & 32 \\
+    \hline
+    n =32000     &3.06 e-04&1.66 e-04&7.82 e-05&3.56 e-05&2.05 e-05&1.66 e-05  \\
+    \hline
+    n =64000     &1.41 e-03&6.03 e-04&2.72 e-04&1.32 e-04&4.24 e-05&2.73 e-05\\
+    \hline
+    \end{tabular}
+    \caption{This table records the computation time openmp cost for different number of thread to compute the different number of gird.}
+    \label{tab:openmp table}
+\end{table}
 \section{Discussion}
 
 \end{document}
