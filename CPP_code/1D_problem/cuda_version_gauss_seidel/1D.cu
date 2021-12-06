@@ -69,13 +69,14 @@ int main(int argc, char **argv){
     cudaMemcpy(dev_u, u, bytes2, cudaMemcpyHostToDevice);
     block_cnt = (N+2)/thread_cnt + ((N+2) % thread_cnt > 0);
   start = std::chrono::steady_clock::now();
-	for (int t=0; t<100000; t++){
+	for (int t=0; t<10000000; t++){
 	    gauss_seidel<<<block_cnt, thread_cnt>>>(dev_mass_matrix, dev_left_vecotr, dev_u, dev_u1, N);
 	    dev_u = dev_u1;
 	}
    stop = std::chrono::steady_clock::now(); 
     auto elapsed_gpu_1 = std::chrono::duration_cast<time_span>(stop - start).count();
-	cout << elapsed_gpu_1 << endl;
+    float full_time = elapsed_gpu_1;
+	cout << full_time/10000000 << endl;
 	ofstream myfile;
 	cudaMemcpy(u, dev_u, bytes2, cudaMemcpyDeviceToHost);
   myfile.open ("result.txt");
