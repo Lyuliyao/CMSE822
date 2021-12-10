@@ -41,9 +41,8 @@ int main()
 	}
     ofstream myfile;
     myfile.open ("result.txt");
-	for (int i = 0; i<=m;i++){
+	for (int i = 0; i<m;i++){
 		myfile << u[i] << " ";
 	}
-	myfile << u[m+1];
   myfile.close();
 }

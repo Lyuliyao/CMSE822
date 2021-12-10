@@ -1,5 +1,4 @@
-
-using PyCall
+using PyPlot, PyCall
 
 """
     t = delaunay(p)
@@ -46,7 +45,7 @@ If `u` == nothing: Plot triangular mesh with nodes `p` and triangles `t`.
 If `u` == solution vector: Plot filled contour color plot of solution `u`.
 """
 function tplot(p, t, u=nothing)
-
+    clf()
     axis("equal")
     if u == nothing
         tripcolor(p[:,1], p[:,2], t .- 1, 0*t[:,1],
@@ -54,6 +53,7 @@ function tplot(p, t, u=nothing)
     else
         tricontourf(p[:,1], p[:,2], t .- 1, u, 20)
     end
+    draw()
 end
 
 """
