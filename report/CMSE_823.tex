@@ -168,7 +168,43 @@ In two dimensional case, we tried the case
     -\nabla u = 1 
 \end{equation}
 The idea of solving this equation can be stated briefly here.
-Similar as the one dimensional case, we need divide the 2 dimensional domain into different part. There are several code can do this like \cite{persson2004simple} with a C++ version in https://github.com/pgebhardt/libdistmesh. However, it seems to dependent on a geometry library called Qhull. Therefore I just used a Julia code to generate the mesh and then read it in the C++. The generated mesh on different irregular domain can be seen in.
+Similar as the one dimensional case, we need divide the 2 dimensional domain into different part. There are several code can do this like \cite{persson2004simple} with a C++ version in https://github.com/pgebhardt/libdistmesh. However, it seems to dependent on a geometry library called Qhull. Therefore I just used a Julia code to generate the mesh and then read it in the C++. The generated mesh on different irregular domain can be seen in Figure \ref{fig:irregular mesh}.
+\begin{figure}
+    \centering
+    \includegraphics[width = 0.4\linewidth]{../CPP_code/2D_problem/julia_utilities/square.png}
+    \includegraphics[width = 0.4\linewidth]{../CPP_code/2D_problem/julia_utilities/sphere.png}
+    \includegraphics[width = 0.4\linewidth]{../CPP_code/2D_problem/julia_utilities/five_line.png}
+    \includegraphics[width = 0.4\linewidth]{../CPP_code/2D_problem/julia_utilities/half_sphere.png}
+    \caption{The mesh generated on  different domain.}
+    \label{fig:irregular mesh}
+\end{figure}
+
+Then we can define the basis function on different point in the domain, with a linear function equal 1 on itself and 0 on other point in the domain. To be specific, we define the triangulation of the domian $\Omega$ into triangular elements $T^k$, $k= 1,\cdots,K$ and nodes $\mathbf{x}_i,i = 1,\cdots ,n$. Consider the space $V_h$ of continuous functions that are linear within each element.
+Use a nodal basis $V_h = span\{\varphi_1,\cdots,\varphi_n\}$ defined by
+\begin{equation}
+    \varphi_i\in V_h, \quad \varphi_i(\mathbf{x}_j) = \delta_{ij}, \quad 1\leq i,j\leq n
+\end{equation}
+
+A function $v\in V_h$ can then be written as
+\begin{equation}
+    v =\sum_{i=1}^n v_i\varphi_i(\mathbf{x})
+\end{equation}
+with the nodal interpretation $v(\mathbf{x}_j) = v_j$.
+\subsubsection{Local Basis Functions}
+Consider a triangular element $T^k$ with local nodes $\mathbf{x}_1^k,\mathbf{x}_2^k,\mathbf{x}_3^k$. The local basis functions $\mathcal{H}_1^k,\mathcal{H}_2^k,\mathcal{H}_3^k$ are linear functions:
+\begin{equation}
+    \mathcal{H}_\alpha^k = c_\alpha^k + c_{\alpha,x}^kx + c_{\alpha,y}^ky 
+\end{equation}
+with the property that $\mathcal{H}_\alpha^k(\mathbf{x}_\beta) = \delta_{\alpha\beta}$.
+The elementary matrix for an element $T^k$ becomes 
+\begin{equation}
+    A^k_{\alpha\beta} = \int_{T^k} \frac{\partial \mathcal H^k_\alpha}{\partial x}\frac{\partial \mathcal H^k_\beta}{\partial x} + \frac{\partial  \mathcal H^k_\alpha}{\partial y}\frac{\partial \mathcal H^k_\beta}{\partial y} dx = Area^k( c_{\alpha,x}^kc_{\beta,x}^k + c_{\alpha,y}^kc_{\beta,y}^k)
+\end{equation}
+The elementary load becomes
+\begin{equation}
+b_{\alpha}^k = \int_{T^k} f \mathcal H_\alpha^k dx
+= \frac{Area^k}{3} f
+\end{equation}
 \section{Discussion}
 
 \end{document}
