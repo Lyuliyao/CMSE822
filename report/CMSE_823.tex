@@ -100,7 +100,7 @@ First we try Gauss Seidel method to solve the linear system defined in the forma
 \end{algorithmic}
 \end{algorithm}
 
-The numerical result is shown in the Figure \ref{fig:result comparison}
+The numerical result is shown in the Figure \ref{fig:result comparison}. If we use serial version, it will take $3.12e-4$ for $n=32000$ and $1e-3$ for $n = 64000$ 
 \begin{figure}
     \centering
     \includegraphics[width = 0.5\linewidth]{../CPP_code/1D_problem/openmp_version_gauss_seidel/result.png}
@@ -210,7 +210,17 @@ Therefore the finite element convert the PDE into a Linear system
     A u = b
 \end{equation}
 \subsection{parallel computation result}
+First we present some result we get from the serial version of code in Figure \ref{fig:2D_result}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.3\linewidth]{../CPP_code/2D_problem/cpp_code/serial_version/square/result.png}
+    \includegraphics[width=0.3\linewidth]{../CPP_code/2D_problem/cpp_code/serial_version/sphere/result.png}
+    \includegraphics[width=0.3\linewidth]{../CPP_code/2D_problem/cpp_code/serial_version/test3/result.png}
+    \caption{The result of the two dimensional Finite element method}
+    \label{fig:2D_result}
+\end{figure}
 
+The first strategy  is to use OpenMP to solve the problem, the same as the former 1D process, each process can update some point in each iteration. The computation time for each iteration is shown in the Figure \ref{}
 \section{Discussion}
 
 \end{document}
