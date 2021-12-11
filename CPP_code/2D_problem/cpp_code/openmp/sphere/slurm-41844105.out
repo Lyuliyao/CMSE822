@@ -1,0 +1,81 @@
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+6.73793e-06
+4.24195e-06
+3.68396e-06
+2.9043e-06
+3.78522e-06
+7.95009e-06
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+ERROR: LoadError: BoundsError: attempt to access 106185-element Vector{UInt8} at index [1:106185, 2]
+Stacktrace:
+ [1] throw_boundserror(A::Vector{UInt8}, I::Tuple{Base.Slice{Base.OneTo{Int64}}, Int64})
+   @ Base ./abstractarray.jl:691
+ [2] checkbounds
+   @ ./abstractarray.jl:656 [inlined]
+ [3] _getindex
+   @ ./multidimensional.jl:838 [inlined]
+ [4] getindex
+   @ ./abstractarray.jl:1218 [inlined]
+ [5] tplot(p::Vector{UInt8}, t::Vector{UInt8}, u::Vector{Any})
+   @ Main /mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/CPP_code/2D_problem/julia_utilities/Mesh_utilities.jl:62
+ [6] top-level scope
+   @ /mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/CPP_code/2D_problem/cpp_code/openmp/sphere/result_figure.jl:14
+in expression starting at /mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/CPP_code/2D_problem/cpp_code/openmp/sphere/result_figure.jl:14
+JobId=41844105 JobName=run_me
+   UserId=lyuliyao(6006467) GroupId=cmse(2362) MCS_label=N/A
+   Priority=21168 Nice=0 Account=general QOS=lyuliyao
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:37 TimeLimit=00:10:00 TimeMin=N/A
+   SubmitTime=2021-12-11T16:07:05 EligibleTime=2021-12-11T16:07:05
+   AccrueTime=2021-12-11T16:07:05
+   StartTime=2021-12-11T16:08:36 EndTime=2021-12-11T16:18:36 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2021-12-11T16:08:36
+   Partition=general-short AllocNode:Sid=dev-intel18:5794
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=skl-025
+   BatchHost=skl-025
+   NumNodes=1 NumCPUs=32 NumTasks=32 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=32,mem=24000M,node=1,billing=3648
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryCPU=750M MinTmpDiskNode=0
+   Features=[intel18]&[intel14|intel16|intel18|amr|nvf|nal|nif] DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/CPP_code/2D_problem/cpp_code/openmp/sphere/run_me
+   WorkDir=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/CPP_code/2D_problem/cpp_code/openmp/sphere
+   Comment=stdout=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/CPP_code/2D_problem/cpp_code/openmp/sphere/slurm-41844105.out 
+   StdErr=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/CPP_code/2D_problem/cpp_code/openmp/sphere/slurm-41844105.out
+   StdIn=/dev/null
+   StdOut=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/CPP_code/2D_problem/cpp_code/openmp/sphere/slurm-41844105.out
+   Power=
+   NtasksPerTRES:0
+
+
+SLURM Job ID: 41844105
+WrkDir=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/CPP_code/2D_problem/cpp_code/openmp/sphere
+===================================================================================
+          JobID |            41844105 |      41844105.batch |     41844105.extern |
+        JobName |              run_me |               batch |              extern |
+           User |            lyuliyao |                     |                     |
+       NodeList |             skl-025 |             skl-025 |             skl-025 |
+         NNodes |                   1 |                   1 |                   1 |
+         NTasks |                     |                   1 |                   1 |
+          NCPUS |                  32 |                  32 |                  32 |
+      AllocGRES |                     |                     |                     |
+         ReqMem |               750Mc |               750Mc |               750Mc |
+      Timelimit |            00:10:00 |                     |                     |
+        Elapsed |            00:00:40 |            00:00:40 |            00:00:40 |
+       TotalCPU |            00:00:00 |            00:01:11 |            00:00:00 |
+     AveCPULoad |                     |               1.775 |                     |
+         MaxRSS |                     |             241160K |                     |
+      MaxVMSize |                     |             217660K |                     |
+          Start | 2021-12-11T16:08:36 | 2021-12-11T16:08:36 | 2021-12-11T16:08:36 |
+            End |             Unknown |             Unknown |             Unknown |
+       ExitCode |                 0:0 |                 0:0 |                 0:0 |
+          State |             RUNNING |             RUNNING |             RUNNING |
+===================================================================================
+slurmstepd: error: acct_gather_profile/influxdb _send_data: curl_easy_perform failed to send data (discarded). Reason: Couldn't connect to server

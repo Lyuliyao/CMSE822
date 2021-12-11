@@ -11,7 +11,7 @@ using namespace std;
 #define right_b 0
 
 int main(int argc, char **argv){
-    int N = atoi(argv[2]);
+	int n_tct = atoi(argv[1]);
 	int m;
 	int n;
 	ifstream f1("A.txt");
@@ -20,6 +20,7 @@ int main(int argc, char **argv){
 	float mass_matrix[n][m];
 	float left_vector[n];
     float u[m];
+    float u_new[m];
 
 	for (int i = 0; i < n; i++)
 	for (int j = 0; j < m; j++){
@@ -28,17 +29,22 @@ int main(int argc, char **argv){
 	for (int i = 0; i < m; i++){
 	  f2 >> left_vector[i] ;
 	}
+	omp_set_nested(1);
+	omp_set_num_threads(n_tct);
 	double t1 = omp_get_wtime();
-	for (int t=0; t<100; t++){
-	    #pragma omp parallel for shared(u)
+	for (int t=0; t<10000; t++){
+	    #pragma omp parallel for shared(u_new,u)
 		for (int i=0; i<m;i++){
-		    u[i] = left_vector[i];
+		    u_new[i] = left_vector[i];
 		    for (int j=0; j <m;j++){
 		        if(i!=j)
-			    u[i] = u[i] - mass_matrix[i][j]*u[j];
+			    u_new[i] = u_new[i] - mass_matrix[i][j]*u[j];
 		    }
-		    u[i] = u[i]/mass_matrix[i][i];
-		    cout << u[i] << endl;
+		    u_new[i] = u_new[i]/mass_matrix[i][i];
+		}
+	    #pragma omp parallel for shared(u,u_new)
+		for (int i=0; i<m;i++){
+		    u[i] =u_new[i];
 		}
 	}
 	double t2 = omp_get_wtime();
@@ -48,4 +54,5 @@ int main(int argc, char **argv){
 		myfile << u[i] << " ";
 	}
   myfile.close();
+    cout << (t2 - t1)/100000 << endl;
 }

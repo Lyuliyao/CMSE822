@@ -10,8 +10,8 @@ using namespace std;
 #define left_b 0
 #define right_b 0
 
-int main(int argc, char **argv){
-    int N = atoi(argv[2]);
+int main()
+{
 	int m;
 	int n;
 	ifstream f1("A.txt");
@@ -28,9 +28,7 @@ int main(int argc, char **argv){
 	for (int i = 0; i < m; i++){
 	  f2 >> left_vector[i] ;
 	}
-	double t1 = omp_get_wtime();
 	for (int t=0; t<100; t++){
-	    #pragma omp parallel for shared(u)
 		for (int i=0; i<m;i++){
 		    u[i] = left_vector[i];
 		    for (int j=0; j <m;j++){
@@ -41,7 +39,6 @@ int main(int argc, char **argv){
 		    cout << u[i] << endl;
 		}
 	}
-	double t2 = omp_get_wtime();
     ofstream myfile;
     myfile.open ("result.txt");
 	for (int i = 0; i<m;i++){
