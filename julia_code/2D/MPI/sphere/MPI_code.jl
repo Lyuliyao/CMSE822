@@ -61,10 +61,8 @@ function pmesh(pv, hmax, nref)
             break
         end
         ix_all = findall(area.>hmax^2 / 2)
-        for ix in ix_all
-            pc = circumcenter(p[t[ix,:],:])
-            p = [p; pc]
-        end
+        pc = circumcenter(p[t[ix,:],:])
+        p = [p; pc]
     end
 
     for iref = 1:nref
@@ -141,6 +139,7 @@ function gs_iteration(A,b,u)
                 u_new[row] = u_new[row] - A.nzval[A.rowval[j]]*u[A.rowval[j]]
 
             else
+                println(aii)
                 aii = A.nzval[j]
             end
         end
@@ -153,7 +152,7 @@ function Gaussian(A,b)
     
 
     local u = zeros(size(b));
-    for t = 1:10000
+    for t = 1:10
         u = gs_iteration(A,b,u)
         MPI.Allreduce!(u,+, comm)
     end
@@ -165,13 +164,14 @@ global comm = MPI.COMM_WORLD
 global p_num = MPI.Comm_size(comm)
 global p_id = MPI.Comm_rank(comm)
 
-n = 256
+n = 512
 phi = 2pi*(0: n) /n
 pv = [cos.(phi) sin.(phi)]
 p, t, e = pmesh(pv, 2pi/n, 0)
 e = e[@. p[e, 2] > (.6 - abs(p[e, 1] - 0.5) - 1e-6) ]
 
 A,b = fempoi(p,t,e)
+u = b\A'
 MPI.Barrier(comm)
 global N = size(A,1)
 start_time = time()

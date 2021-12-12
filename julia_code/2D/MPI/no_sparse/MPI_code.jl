@@ -55,6 +55,8 @@ function pmesh(pv, hmax, nref)
 
         area = triarea(p, t)
         maxarea, ix = findmax(area)
+        #println(maxarea)
+        #println(hmax^2 / 2)
         if maxarea < hmax^2 / 2
             break
         end
@@ -106,7 +108,7 @@ function fempoi(p,t,e)
             end
         end
     end
-    A = sparse((x->x[2]).(A), (x->x[1]).(A), (x->x[3]).(A), N, N)
+    A = sparse((x->x[1]).(A), (x->x[2]).(A), (x->x[3]).(A), N, N)
     Ne=size(e)
     Ne=Ne[1];
     for i=1:Ne
@@ -131,15 +133,12 @@ function gs_iteration(A,b,u)
     for row = p_id+1:p_num:size(A,1)
         u_new[row] = b[row];
         aii = 1;
-        for j = A.colptr[row]:A.colptr[row+1]-1
-            if A.rowval[j]!=row
-                u_new[row] = u_new[row] - A.nzval[A.rowval[j]]*u[A.rowval[j]]
-
-            else
-                aii = A.nzval[j]
+        for j = 1:size(A,1)
+            if j!=row
+                u_new[row] = u_new[row] - A[row,j]*u[j] # A is transposed  her
             end
         end
-        u_new[row] = u_new[row]/aii;
+        u_new[row] = u_new[row]/A[row,row];
     end
     return u_new
 end
@@ -147,8 +146,8 @@ end
 function Gaussian(A,b)
     
 
-    local u = zeros(size(b));
-    for t = 1:10000
+    u = zeros(size(b));
+    for t = 1:10
         u = gs_iteration(A,b,u)
         MPI.Allreduce!(u,+, comm)
     end
@@ -159,20 +158,22 @@ MPI.Init()
 global comm = MPI.COMM_WORLD
 global p_num = MPI.Comm_size(comm)
 global p_id = MPI.Comm_rank(comm)
-x = 0:.1:1
-y = 0.1*(-1).^(0: 10)
-pv = [x y; .5 .6; 0 .1]
-p, t, e = pmesh(pv, 0.001, 0)
+
+n = 512
+phi = 2pi*(0: n) /n
+pv = [cos.(phi) sin.(phi)]
+p, t, e = pmesh(pv, 2pi/n, 0)
 e = e[@. p[e, 2] > (.6 - abs(p[e, 1] - 0.5) - 1e-6) ]
 
 A,b = fempoi(p,t,e)
+MPI.Barrier(comm)
 global N = size(A,1)
 start_time = time()
 u = Gaussian(A,b)
 end_time = time()
 if p_id == 0
     writedlm("u.txt",u)
-    println((end_time-start_time)/10000)
+    println((end_time-start_time)/10)
 end
 
 
