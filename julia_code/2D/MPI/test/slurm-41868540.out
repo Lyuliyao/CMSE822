@@ -1,0 +1,33 @@
+
+Lmod is automatically replacing "GNU/6.4.0-2.28" with "AOCC/2.2.0".
+
+
+Lmod is automatically replacing "GNU/6.4.0-2.28" with "AOCC/2.2.0".
+
+-------------------------------------------------------------------------------
+The following dependent module(s) are not currently loaded: OpenBLAS/0.2.20 (required by: ScaLAPACK/2.0.2-OpenBLAS-0.2.20, Boost/1.67.0, Python/3.6.4, ScaLAPACK/2.0.2-OpenBLAS-0.2.20, Boost/1.67.0, Python/3.6.4)
+-------------------------------------------------------------------------------
+
+Inactive Modules:
+  1) CMake/3.11.1        5) Python/3.6.4                        9) imkl/2018.1.163
+  2) FFTW/3.3.7          6) SQLite/3.21.0                      10) libreadline/7.0
+  3) OpenBLAS/0.2.20     7) ScaLAPACK/2.0.2-OpenBLAS-0.2.20    11) tbb/2018_U3
+  4) OpenMPI/2.1.2       8) Tcl/8.6.8
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) Boost/1.67.0     3) bzip2/1.0.6      5) ncurses/6.0
+  2) GMP/6.1.2        4) libffi/3.2.1     6) zlib/1.2.11
+
+
+Activating Modules:
+  1) OpenMPI/4.0.3
+
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+slurmstepd: error: acct_gather_profile/influxdb _send_data: curl_easy_perform failed to send data (discarded). Reason: Couldn't connect to server
+slurmstepd: error: acct_gather_profile/influxdb _send_data: curl_easy_perform failed to send data (discarded). Reason: Couldn't connect to server
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 41868540 ON amr-223 CANCELLED AT 2021-12-12T12:37:02 ***
+slurmstepd: error: *** STEP 41868540.0 ON amr-223 CANCELLED AT 2021-12-12T12:37:02 ***
