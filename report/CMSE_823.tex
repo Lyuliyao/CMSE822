@@ -230,6 +230,13 @@ The first strategy  is to use OpenMP to solve the problem, the same as the forme
 
 Another way to reduce the computation time is use the Sparse Matrix. I use the julia to implement the Sparse Matrix code. The mass matirx $A$ in the finite element code is very sparse. I try to record them in a Compressed sparse column version with three vector (val, row\_ind, col\_ptr), where val is an array of the (top-to-bottom, then left-to-right) non-zero values of the matrix; row\_ind is the row indices corresponding to the values; and, col\_ptr is the list of val indexes where each column starts. Then I use the MPI package of the julia to do the parallel computation \cite{Byrne2021}. The computation time compared with the number of thread can be seen in figure
 
+\begin{figure}
+    \centering
+    \includegraphics{julia_code/2D/MPI/sphere/julia_MPI_2D.png}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
 \section{Discussion}
 \printbibliography %Prints bibliography
 \end{document}
