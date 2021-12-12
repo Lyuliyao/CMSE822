@@ -1,0 +1,319 @@
+
+Lmod is automatically replacing "GNU/6.4.0-2.28" with "AOCC/2.2.0".
+
+
+Lmod is automatically replacing "GNU/6.4.0-2.28" with "AOCC/2.2.0".
+
+-------------------------------------------------------------------------------
+The following dependent module(s) are not currently loaded: OpenBLAS/0.2.20 (required by: ScaLAPACK/2.0.2-OpenBLAS-0.2.20, Boost/1.67.0, Python/3.6.4, ScaLAPACK/2.0.2-OpenBLAS-0.2.20, Boost/1.67.0, Python/3.6.4)
+-------------------------------------------------------------------------------
+
+Inactive Modules:
+  1) CMake/3.11.1        5) Python/3.6.4                        9) imkl/2018.1.163
+  2) FFTW/3.3.7          6) SQLite/3.21.0                      10) libreadline/7.0
+  3) OpenBLAS/0.2.20     7) ScaLAPACK/2.0.2-OpenBLAS-0.2.20    11) tbb/2018_U3
+  4) OpenMPI/2.1.2       8) Tcl/8.6.8
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) Boost/1.67.0     3) bzip2/1.0.6      5) ncurses/6.0
+  2) GMP/6.1.2        4) libffi/3.2.1     6) zlib/1.2.11
+
+
+Activating Modules:
+  1) OpenMPI/4.0.3
+
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+0.00023432629108428954
+slurmstepd: error: acct_gather_profile/influxdb _send_data: curl_easy_perform failed to send data (discarded). Reason: Couldn't connect to server
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+0.00016830551624298095
+slurmstepd: error: acct_gather_profile/influxdb _send_data: curl_easy_perform failed to send data (discarded). Reason: Couldn't connect to server
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+0.00012042589664459227
+slurmstepd: error: acct_gather_profile/influxdb _send_data: curl_easy_perform failed to send data (discarded). Reason: Couldn't connect to server
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+0.00010612300395965577
+slurmstepd: error: acct_gather_profile/influxdb _send_data: curl_easy_perform failed to send data (discarded). Reason: Couldn't connect to server
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+slurmstepd: error: acct_gather_profile/influxdb _send_data: curl_easy_perform failed to send data (discarded). Reason: Couldn't connect to server
+0.00020770659446716307
+slurmstepd: error: acct_gather_profile/influxdb _send_data: curl_easy_perform failed to send data (discarded). Reason: Couldn't connect to server
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+┌ Warning: `vendor()` is deprecated, use `BLAS.get_config()` and inspect the output instead
+│   caller = npyinitialize() at numpy.jl:67
+└ @ PyCall ~/.julia/packages/PyCall/3fwVL/src/numpy.jl:67
+0.00027068819999694825
+JobId=41869599 JobName=run_me
+   UserId=lyuliyao(6006467) GroupId=cmse(2362) MCS_label=N/A
+   Priority=9763 Nice=0 Account=general QOS=lyuliyao
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:06:06 TimeLimit=04:00:00 TimeMin=N/A
+   SubmitTime=2021-12-12T12:46:06 EligibleTime=2021-12-12T12:46:06
+   AccrueTime=2021-12-12T12:46:06
+   StartTime=2021-12-12T12:46:44 EndTime=2021-12-12T16:46:44 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2021-12-12T12:46:44
+   Partition=general-short AllocNode:Sid=dev-amd20-v100:99380
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=amr-018
+   BatchHost=amr-018
+   NumNodes=1 NumCPUs=32 NumTasks=32 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=32,mem=320G,node=1,billing=49807
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryCPU=10G MinTmpDiskNode=0
+   Features=[amd20]&[intel14|intel16|intel18|amr|nvf|nal|nif] DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/julia_code/2D/MPI/sphere/run_me
+   WorkDir=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/julia_code/2D/MPI/sphere
+   Comment=stdout=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/julia_code/2D/MPI/sphere/slurm-41869599.out 
+   StdErr=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/julia_code/2D/MPI/sphere/slurm-41869599.out
+   StdIn=/dev/null
+   StdOut=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/julia_code/2D/MPI/sphere/slurm-41869599.out
+   Power=
+   NtasksPerTRES:0
+
+
+SLURM Job ID: 41869599
+WrkDir=/mnt/ufs18/home-058/lyuliyao/Documents/CMSE822/CMSE822/julia_code/2D/MPI/sphere
+=========================================================================================================
+          JobID |            41869599 |      41869599.batch |     41869599.extern |          41869599.0 |
+        JobName |              run_me |               batch |              extern |               julia |
+           User |            lyuliyao |                     |                     |                     |
+       NodeList |             amr-018 |             amr-018 |             amr-018 |             amr-018 |
+         NNodes |                   1 |                   1 |                   1 |                   1 |
+         NTasks |                     |                   1 |                   1 |                   1 |
+          NCPUS |                  32 |                  32 |                  32 |                  32 |
+      AllocGRES |                     |                     |                     |                     |
+         ReqMem |                10Gc |                10Gc |                10Gc |                10Gc |
+      Timelimit |            04:00:00 |                     |                     |                     |
+        Elapsed |            00:06:06 |            00:06:06 |            00:06:06 |            00:00:36 |
+       TotalCPU |            01:35:37 |            00:00:01 |            00:00:00 |           00:56.997 |
+     AveCPULoad |             15.6749 |          0.00273224 |                     |             1.58325 |
+         MaxRSS |                     |               5740K |                     |             597512K |
+      MaxVMSize |                     |             218012K |                     |            2908472K |
+          Start | 2021-12-12T12:46:44 | 2021-12-12T12:46:44 | 2021-12-12T12:46:44 | 2021-12-12T12:47:18 |
+            End |             Unknown |             Unknown |             Unknown | 2021-12-12T12:47:54 |
+       ExitCode |                 0:0 |                 0:0 |                 0:0 |                 0:0 |
+          State |             RUNNING |             RUNNING |             RUNNING |           COMPLETED |
+=========================================================================================================
+          JobID |          41869599.1 |          41869599.2 |          41869599.3 |          41869599.4 |
+        JobName |               julia |               julia |               julia |               julia |
+           User |                     |                     |                     |                     |
+       NodeList |             amr-018 |             amr-018 |             amr-018 |             amr-018 |
+         NNodes |                   1 |                   1 |                   1 |                   1 |
+         NTasks |                   2 |                   4 |                   8 |                  16 |
+          NCPUS |                  32 |                  32 |                  32 |                  32 |
+      AllocGRES |                     |                     |                     |                     |
+         ReqMem |                10Gc |                10Gc |                10Gc |                10Gc |
+      Timelimit |                     |                     |                     |                     |
+        Elapsed |            00:00:39 |            00:00:41 |            00:00:50 |            00:01:03 |
+       TotalCPU |           02:08.458 |           04:31.636 |           11:00.746 |           25:41.343 |
+     AveCPULoad |             3.29379 |             6.62527 |             13.2149 |             24.4658 |
+         MaxRSS |             646216K |             643944K |             645160K |             591076K |
+      MaxVMSize |            2953112K |            2978300K |            2981872K |            2859488K |
+          Start | 2021-12-12T12:47:54 | 2021-12-12T12:48:33 | 2021-12-12T12:49:15 | 2021-12-12T12:50:07 |
+            End | 2021-12-12T12:48:33 | 2021-12-12T12:49:14 | 2021-12-12T12:50:05 | 2021-12-12T12:51:10 |
+       ExitCode |                 0:0 |                 0:0 |                 0:0 |                 0:0 |
+          State |           COMPLETED |           COMPLETED |           COMPLETED |           COMPLETED |
+=========================================================================================================
+          JobID |          41869599.5 |
+        JobName |               julia |
+           User |                     |
+       NodeList |             amr-018 |
+         NNodes |                   1 |
+         NTasks |                  32 |
+          NCPUS |                  32 |
+      AllocGRES |                     |
+         ReqMem |                10Gc |
+      Timelimit |                     |
+        Elapsed |            00:01:40 |
+       TotalCPU |           51:18.230 |
+     AveCPULoad |             30.7823 |
+         MaxRSS |             574680K |
+      MaxVMSize |            1668080K |
+          Start | 2021-12-12T12:51:10 |
+            End | 2021-12-12T12:52:50 |
+       ExitCode |                 0:0 |
+          State |           COMPLETED |
+=======================================
+slurmstepd: error: acct_gather_profile/influxdb _send_data: curl_easy_perform failed to send data (discarded). Reason: Couldn't connect to server
