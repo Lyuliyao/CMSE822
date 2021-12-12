@@ -210,7 +210,7 @@ Therefore the finite element convert the PDE into a Linear system
     A u = b
 \end{equation}
 \subsection{parallel computation result}
-First we present some result we get from the serial version of code in Figure \ref{fig:2D_result}
+First we present some result we get from the serial version of code in Figure \ref{fig:2D_result}, with time about $1e-5$ seconds for each iteration when we divide the sphere into 72 triangular.
 \begin{figure}
     \centering
     \includegraphics[width=0.3\linewidth]{../CPP_code/2D_problem/cpp_code/serial_version/square/result.png}
@@ -220,7 +220,16 @@ First we present some result we get from the serial version of code in Figure \r
     \label{fig:2D_result}
 \end{figure}
 
-The first strategy  is to use OpenMP to solve the problem, the same as the former 1D process, each process can update some point in each iteration. The computation time for each iteration is shown in the Figure \ref{}
-\section{Discussion}
+The first strategy  is to use OpenMP to solve the problem, the same as the former 1D process, each process can update some point in each iteration. The computation time for each iteration is shown in the Figure \ref{fig:2D openMP time} with  16 process the time used is about $2.93e-5$ seconds which is important decrease with respect to the serial version. However, with the increase of the process, the time used cannot be reduced anymore. I think this may because of the communication time.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{CPP_code/2D_problem/cpp_code/openmp/sphere/time_OpenMP_2D.png}
+    \caption{The time used with respect to the number of the process in OpenMP}
+    \label{fig:2D openMP time}
+\end{figure}
 
+Another way to reduce the computation time is use the Sparse Matrix. I use the julia to implement the Sparse Matrix code. The mass matirx $A$ in the finite element code is very sparse. I try to record them in a Compressed sparse column version with three vector (val, row\_ind, col\_ptr), where val is an array of the (top-to-bottom, then left-to-right) non-zero values of the matrix; row\_ind is the row indices corresponding to the values; and, col\_ptr is the list of val indexes where each column starts. Then I use the MPI package of the julia to do the parallel computation \cite{Byrne2021}. The computation time compared with the number of thread can be seen in figure
+
+\section{Discussion}
+\printbibliography %Prints bibliography
 \end{document}
